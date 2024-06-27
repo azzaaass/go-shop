@@ -1,0 +1,101 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Agus hari",
+            "email": "admin@gmail.com",
+            "username": "agus",
+            "password": "password"
+        },
+        {
+            "id": "2",
+            "name": "Liliana",
+            "email": "lili@gmail.com",
+            "username": "lili",
+            "password": "123"
+        },
+        {
+            "id": "bcae",
+            "username": "azza",
+            "email": "azza@gmail.com",
+            "password": "password"
+        }
+    ],
+    "services": [
+        {
+            "id": "1",
+            "name": "Internet",
+            "icon": "text-red-400 fa-solid fa-wifi"
+        },
+        {
+            "id": "2",
+            "name": "Pulsa",
+            "icon": "fa-solid fa-mobile-screen-button"
+        },
+        {
+            "id": "3",
+            "name": "Listrik PLN",
+            "icon": "text-yellow-400 fa-solid fa-lightbulb"
+        },
+        {
+            "id": "4",
+            "name": "Air",
+            "icon": "text-blue-400 fa-solid fa-droplet"
+        },
+        {
+            "id": "5",
+            "name": "Telepon",
+            "icon": "fa-solid fa-phone"
+        },
+        {
+            "id": "6",
+            "name": "Asuransi",
+            "icon": "text-green-400 fa-solid fa-notes-medical"
+        },
+        {
+            "id": "7",
+            "name": "TV",
+            "icon": "fa-solid fa-tv"
+        },
+        {
+            "id": "8",
+            "name": "Tiket",
+            "icon": "text-red-400 fa-solid fa-ticket"
+        },
+        {
+            "id": "9",
+            "name": "Lainya",
+            "icon": "fa-solid fa-table-cells-large"
+        }
+    ],
+    "reminders": [
+        {
+            "id": "1",
+            "id_user": "1",
+            "id_payment": "3827687342",
+            "service": [
+                {
+                    "id": "3",
+                    "name": "Listrik PLN",
+                    "image": ""
+                }
+            ],
+            "price": "512000",
+            "description": "test test"
+        },
+        {
+            "id": "2",
+            "id_user": "1",
+            "id_payment": "88372874",
+            "service": [
+                {
+                    "id": "3",
+                    "name": "Listrik PLN",
+                    "image": ""
+                }
+            ],
+            "price": "512000",
+            "description": "Bayar tagihan ini sebelum 24 Juli 2024"
+        }
+    ]
+}

@@ -28,4 +28,12 @@ class ServiceController extends Controller
         ];
         return view('homepage', $data);
     }
+
+    public function paket()
+    {
+        $data = [
+            'page' => 'Paket'
+        ];
+        return view('services.paket', $data);
+    }
 }

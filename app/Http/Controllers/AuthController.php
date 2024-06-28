@@ -42,8 +42,7 @@ class AuthController extends Controller
         if (count($users) > 0) {
             if ($users[0]['password'] == $request->password) {
                 $user = $users[0];
-                // dd($user);
-                // session(['user' => $user]);
+              
                 // add data to sesion
                 $request->session()->put('id', $user['id']);
                 $request->session()->put('name', $user['name']);

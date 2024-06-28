@@ -27,16 +27,42 @@
 
     <nav class="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-50">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-            <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="{{ route('homepage') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <p class="text-green-600 self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><i
                         class="pr-4 fa-brands fa-shopify text-3xl"></i>Go-Shop</p>
             </a>
             <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">(555)
-                    412-1234</a>
-                <a href="{{ route('login') }}"><button
-                        type="button"
-                        class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Login</button></a>
+                @if (session('id'))
+                    <a class="text-sm  text-gray-500 dark:text-white">Paket data</a>
+                    <a class="text-sm  text-gray-500 dark:text-white">Pulsa</a>
+                    <a class="text-sm  text-gray-500 dark:text-white">Listrik</a>
+                    <a class="text-sm  text-gray-500 dark:text-white">Wifi</a>
+
+                    <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown"
+                        data-dropdown-placement="bottom-start"
+                        class="w-10 h-10 rounded-full cursor-pointer object-cover"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Hb5xzFZJCTW4cMqmPwsgfw-gILUV7QevvQ&s"
+                        alt="User dropdown">
+
+                    <!-- Dropdown menu -->
+                    <div id="userDropdown"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                        <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <div>{{ session('name') }}</div>
+                            <div class="font-medium truncate">{{ session('email') }}</div>
+                        </div>
+                        <div class="py-1">
+                            <a href="{{ route('logout') }}"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                                out</a>
+                        </div>
+                    </div>
+                @else
+                    <a class="text-sm  text-gray-500 dark:text-white">Anda belum login <span
+                            class="text-base">😩</span></a>
+                    <a href="{{ route('login') }}"><button type="button"
+                            class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Login</button></a>
+                @endif
             </div>
         </div>
     </nav>

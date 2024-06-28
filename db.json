@@ -24,64 +24,75 @@
     "services": [
         {
             "id": "1",
-            "name": "Internet",
-            "icon": "text-red-400 fa-solid fa-wifi"
+            "name": "Paket data",
+            "icon": "text-green-600 fa-solid fa-mobile-screen-button",
+            "slug": "paket-data"
         },
         {
             "id": "2",
             "name": "Pulsa",
-            "icon": "fa-solid fa-mobile-screen-button"
+            "icon": "text-green-600 fa-solid fa-mobile-retro",
+            "slug": "pulsa"
         },
         {
             "id": "3",
             "name": "Listrik PLN",
-            "icon": "text-yellow-400 fa-solid fa-lightbulb"
+            "icon": "text-yellow-400 fa-solid fa-lightbulb",
+            "slug": "listrik-pln"
         },
         {
             "id": "4",
             "name": "Air",
-            "icon": "text-blue-400 fa-solid fa-droplet"
+            "icon": "text-blue-500 fa-solid fa-droplet",
+            "slug": "air"
         },
         {
             "id": "5",
             "name": "Telepon",
-            "icon": "fa-solid fa-phone"
+            "icon": "text-green-600 fa-solid fa-phone",
+            "slug": "telepon"
         },
         {
             "id": "6",
             "name": "Asuransi",
-            "icon": "text-green-400 fa-solid fa-notes-medical"
+            "icon": "text-red-500 fa-solid fa-notes-medical",
+            "slug": "asuransi"
         },
         {
             "id": "7",
             "name": "TV",
-            "icon": "fa-solid fa-tv"
+            "icon": "text-yellow-400 fa-solid fa-tv",
+            "slug": "tv"
         },
         {
             "id": "8",
             "name": "Tiket",
-            "icon": "text-red-400 fa-solid fa-ticket"
+            "icon": "text-red-500 fa-solid fa-ticket",
+            "slug": "tiket"
         },
         {
             "id": "9",
             "name": "Lainya",
-            "icon": "fa-solid fa-table-cells-large"
+            "icon": "fa-solid fa-table-cells-large",
+            "slug": "lainya"
         }
     ],
     "reminders": [
         {
             "id": "1",
             "id_user": "1",
-            "id_payment": "3827687342",
+            "id_payment": "083192777446",
             "service": [
                 {
-                    "id": "3",
-                    "name": "Listrik PLN",
-                    "image": ""
+                    "id": "1",
+                    "name": "Paket data",
+                    "icon": "text-green-600 fa-solid fa-mobile-screen-button",
+                    "slug": "paket-data"
                 }
             ],
-            "price": "512000",
-            "description": "test test"
+            "id_data_packets": "3",
+            "price": "45000",
+            "description": "Paket 100GB/30 Hari"
         },
         {
             "id": "2",
@@ -91,11 +102,60 @@
                 {
                     "id": "3",
                     "name": "Listrik PLN",
-                    "image": ""
+                    "icon": "text-yellow-400 fa-solid fa-lightbulb",
+                    "slug": "listrik-pln"
                 }
             ],
+            "id_data_packets": "3",
             "price": "512000",
             "description": "Bayar tagihan ini sebelum 24 Juli 2024"
+        }
+    ],
+    "data_packets": [
+        {
+            "id": "1",
+            "description": "Paket 10GB/30 Hari",
+            "price": "60000"
+        },
+        {
+            "id": "2",
+            "description": "Paket 20GB/7 Hari",
+            "price": "100000"
+        },
+        {
+            "id": "3",
+            "description": "Paket 30GB/30 Hari",
+            "price": "120000"
+        },
+        {
+            "id": "4",
+            "description": "Paket 50GB/30 Hari",
+            "price": "160000"
+        },
+        {
+            "id": "5",
+            "description": "Paket 100GB/30 Hari",
+            "price": "200000"
+        },
+        {
+            "id": "6",
+            "description": "Paket 200GB/30 Hari",
+            "price": "260000"
+        },
+        {
+            "id": "7",
+            "description": "Paket 500GB/30 Hari",
+            "price": "400000"
+        },
+        {
+            "id": "8",
+            "description": "Paket 1TB/30 Hari",
+            "price": "600000"
+        },
+        {
+            "id": "9",
+            "description": "Paket 2TB/30 Hari",
+            "price": "1000000"
         }
     ]
 }

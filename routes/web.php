@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,19 @@ Route::post('/register', [AuthController::class, 'registerRequest'])->name('regi
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/homepage', [ServiceController::class, 'index'])->name('homepage')->middleware('check.user');
+Route::get('/homepage', [ServiceController::class, 'index'])->name('homepage');
+
+Route::group(['middleware' => 'check.user', 'prefix' => 'service', 'as' => 'service.'], function () {
+    Route::get('/paket-data', [ServiceController::class, 'paket'])->name('paket-data');
+    Route::get('/pulsa', [ServiceController::class, 'paket'])->name('pulsa');
+    Route::get('/listrik-pln', [ServiceController::class, 'paket'])->name('listrik-pln');
+    Route::get('/air', [ServiceController::class, 'paket'])->name('air');
+    Route::get('/telepon', [ServiceController::class, 'paket'])->name('telepon');
+    Route::get('/asuransi', [ServiceController::class, 'paket'])->name('asuransi');
+    Route::get('/tv', [ServiceController::class, 'paket'])->name('tv');
+    Route::get('/tiket', [ServiceController::class, 'paket'])->name('tiket');
+    Route::get('/lainya', [ServiceController::class, 'paket'])->name('lainya');
+
+});
+
+Route::post('/payment', [PaymentController::class, 'index'])->name('payment');
